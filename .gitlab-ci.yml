@@ -1,0 +1,17 @@
+stages:
+  - build
+  - deploy
+build:
+  stage: build
+  script:
+    - docker build -t strixthekiet/vdt24-web:latest
+    - docker push strixthekiet/vdt24-web:latest
+
+deploy:
+  stage: deploy
+  script:
+    - sed -i "s/tag: .*/tag: latest/": values.yaml
+    - git add  values.yaml
+    - git commit -m "Updated"
+    - git push origin HEAD
+

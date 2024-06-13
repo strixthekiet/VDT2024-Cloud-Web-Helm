@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/strixthekiet/VDT2024-Cloud-WebUI'
+    repoURL: 'https://github.com/strixthekiet/VDT2024-Cloud-Web-Helm'
     targetRevision: HEAD
     path: .
   destination:
