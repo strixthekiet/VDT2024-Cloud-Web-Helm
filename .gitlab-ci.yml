@@ -4,7 +4,7 @@ stages:
 build:
   stage: build
   script:
-    - docker build -t strixthekiet/vdt24-web:latest
+    - docker build -t strixthekiet/vdt24-web:latest .
     - docker push strixthekiet/vdt24-web:latest
 
 deploy:
